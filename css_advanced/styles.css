@@ -1,0 +1,256 @@
+/* Styles.css */
+
+/* Import Google Fonts - Source Sans Pro */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+
+/* You might need to import Spin-Cycle-OT if you have the file: */
+/* @font-face {
+    font-family: 'Spin-Cycle-OT';
+    src: url('./fonts/Spin-Cycle-OT.woff2') format('woff2'),
+         url('./fonts/Spin-Cycle-OT.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+} */
+
+/* Basic Reset & Body Styles */
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', Arial, sans-serif; /* Use Source Sans Pro, fallback to Arial */
+    color: #fff; /* Default text color for the page */
+    background-color: #1a1a1a; /* A dark background to match the overall theme */
+}
+
+/* Header Styling */
+header {
+    position: absolute; /* Allows content below to start from top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100; /* Ensure header is on top of other content */
+    padding: 20px 0; /* Add some vertical padding */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Adjust as needed for content width */
+    margin: 0 auto;
+    padding: 0 20px; /* Horizontal padding */
+}
+
+nav img {
+    height: 30px; /* Adjust logo height as needed */
+    width: auto;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px; /* Spacing between navigation items */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: opacity 0.3s ease;
+}
+
+nav ul li a:hover {
+    opacity: 0.8;
+}
+
+/* First Section (Banner) Styling */
+.hero-section { /* Added a class for clarity, apply to the first section */
+    position: relative;
+    background-image: url('./images/hero-background.jpg'); /* Assuming the main background image */
+    background-size: cover;
+    background-position: center;
+    min-height: 800px; /* Adjust height based on content and design */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 100px; /* To prevent header content from being covered */
+}
+
+/* Overlay for the background image */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    z-index: 1;
+}
+
+.hero-content, .pros-section {
+    position: relative;
+    z-index: 2; /* Ensure content is above the overlay */
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 80px; /* Large font size for "Get schooled" */
+    color: #fff;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero-content > div { /* Container for SMILES GRIN LAUGH */
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* Spacing between words */
+    margin-bottom: 40px;
+}
+
+.hero-content span {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero-content button {
+    background-color: #C271FF; /* Purple button color */
+    color: #fff;
+    border: none;
+    border-radius: 20px; /* Rounded corners */
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    margin-bottom: 120px; /* Space before "Learn from the pros" */
+}
+
+.hero-content button:hover {
+    opacity: 0.9;
+}
+
+/* "Learn from the pros" section */
+.pros-section h2 {
+    font-size: 30px; /* Font size for "Learn from the pros" */
+    color: #fff;
+    margin-bottom: 50px;
+    font-weight: 300; /* Lighter weight */
+}
+
+.pros-cards { /* Container for the four profile cards */
+    display: flex;
+    justify-content: center; /* Center the cards */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 30px; /* Space between cards */
+}
+
+.pros-card { /* Individual profile card */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 200px; /* Limit card width */
+    text-align: center;
+}
+
+.pros-card img {
+    width: 150px; /* Fixed width for profile images */
+    height: 150px; /* Fixed height for profile images */
+    border-radius: 50%; /* Make images circular */
+    object-fit: cover; /* Ensure images cover the area */
+    margin-bottom: 15px;
+}
+
+.pros-card h3 {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.pros-card p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7); /* Slightly lighter color for description */
+    line-height: 1.4;
+}
+
+/* Quote Section Styling */
+.quote-section {
+    background-color: #C271FF; /* The purple background shown in the image */
+    padding: 80px 20px; /* Adjust vertical padding */
+    text-align: center; /* Center content horizontally within the section */
+}
+
+.quote-container {
+    display: flex; /* Use flexbox for image and text alignment */
+    align-items: center; /* Vertically align items in the middle */
+    justify-content: center; /* Center the flex items horizontally */
+    max-width: 800px; /* Constrain the width of the quote container */
+    margin: 0 auto; /* Center the container itself */
+    gap: 40px; /* Space between the image and the text */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.quote-container img {
+    width: 160px; /* Set a fixed width for the profile image */
+    height: 160px; /* Set a fixed height for the profile image */
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Ensure the image covers the area */
+    flex-shrink: 0; /* Prevent the image from shrinking */
+}
+
+.quote-container figure {
+    margin: 0; /* Reset default figure margin */
+    text-align: left; /* Align text within the quote block to the left */
+    flex-grow: 1; /* Allow the figure to grow and take available space */
+    max-width: 600px; /* Limit width of quote text for readability */
+}
+
+.quote-container blockquote {
+    font-size: 22px; /* Adjust font size as per visual */
+    font-weight: 400; /* Regular weight */
+    color: #fff;
+    line-height: 1.6; /* Improve readability */
+    margin: 0 0 20px 0; /* Remove default blockquote margin, add bottom margin */
+    padding: 0; /* Remove default blockquote padding */
+}
+
+.quote-container figcaption h3 {
+    font-size: 20px; /* Name font size */
+    font-weight: 700; /* Bold name */
+    color: #fff;
+    margin: 0 0 5px 0; /* Adjust margin */
+}
+
+.quote-container figcaption p {
+    font-size: 16px; /* Title font size */
+    color: rgba(255, 255, 255, 0.8); /* Slightly lighter color for title */
+    margin: 0;
+}
+
+/* Placeholder for the rest of the main content and footer */
+main section:not(.hero-section):not(.quote-section) { /* Exclude new section from generic styling if needed */
+    padding: 60px 20px; /* Add some padding to other sections */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer {
+    background-color: #000; /* Example footer background */
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
