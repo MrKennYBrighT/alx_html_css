@@ -291,9 +291,6 @@ nav ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Temporarily using a circle as a placeholder for the actual play icon */
-    content: ''; /* Essential for pseudo-elements, even if empty */
-    /* If you have an SVG or Font Awesome play icon, use it here */
 }
 
 .tutorial-card .play-button::before {
@@ -365,8 +362,85 @@ nav ul li a:hover {
     margin: 0 15px 15px 15px; /* Padding inside the card */
 }
 
+/* Membership Section Styling */
+.membership-section {
+    background-color: #1a1a1a; /* Dark background, same as body or slightly different tone */
+    padding: 80px 20px; /* Consistent padding */
+    text-align: center; /* Center the heading and button */
+}
+
+.membership-section h2 {
+    font-size: 32px;
+    font-weight: 300;
+    color: #fff;
+    margin-bottom: 60px;
+}
+
+.membership-features {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow items to wrap */
+    gap: 30px; /* Space between feature items */
+    margin-bottom: 50px; /* Space between features and button */
+    max-width: 1000px; /* Constrain width of features grid */
+    margin-left: auto; /* Center the feature grid */
+    margin-right: auto; /* Center the feature grid */
+}
+
+.feature-item {
+    flex: 1 1 200px; /* Allows items to grow/shrink, with a base width of 200px */
+    max-width: 250px; /* Max width for each item */
+    text-align: center;
+    padding: 20px; /* Padding inside each feature item */
+}
+
+.feature-item img { /* Targets the smile.svg icons */
+    width: 50px; /* Adjust size of icons */
+    height: 50px;
+    margin-bottom: 20px;
+    fill: #C271FF; /* Example: If it's an SVG and you want to color it via CSS */
+}
+
+/* For actual SVG, you might need to target fill or stroke property for color */
+/* If the SVG is embedded directly or loaded as background, this fill might not work directly */
+/* If it's an <img> tag, color won't apply via CSS fill. */
+/* For <img src="./images/smile.svg">, you might need to apply a filter or use an SVG sprite/inline SVG */
+
+
+.feature-item .feature-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.feature-item .feature-description {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.5;
+}
+
+.membership-button {
+    background-color: #C271FF; /* Purple button color */
+    color: #fff;
+    border: none;
+    border-radius: 20px; /* Rounded corners */
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    margin-top: 20px; /* Space above button */
+}
+
+.membership-button:hover {
+    opacity: 0.9;
+}
+
+
 /* Placeholder for the rest of the main content and footer */
-main section:not(.hero-section):not(.quote-section):not(.popular-tutorials-section) { /* Exclude new section from generic styling if needed */
+main section:not(.hero-section):not(.quote-section):not(.popular-tutorials-section):not(.membership-section) {
     padding: 60px 20px; /* Add some padding to other sections */
     max-width: 1200px;
     margin: 0 auto;
