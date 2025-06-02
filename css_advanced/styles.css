@@ -241,8 +241,132 @@ nav ul li a:hover {
     margin: 0;
 }
 
+/* Most Popular Tutorials Section Styling */
+.popular-tutorials-section {
+    padding: 80px 20px; /* Consistent padding with other main sections */
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center; /* To center the heading */
+}
+
+.popular-tutorials-section h2 {
+    font-size: 32px; /* Adjust font size for main section heading */
+    font-weight: 300; /* Lighter weight */
+    color: #fff;
+    margin-bottom: 60px; /* Space below heading */
+}
+
+.tutorial-cards {
+    display: flex;
+    justify-content: center; /* Center the cards if there's extra space */
+    flex-wrap: wrap; /* Allow cards to wrap to the next line on smaller screens */
+    gap: 30px; /* Space between tutorial cards */
+}
+
+.tutorial-card {
+    background-color: #1a1a1a; /* Assuming the card background is the same as body, or slightly different */
+    max-width: 270px; /* Set a max width for each card */
+    text-align: left; /* Align text within the card to the left */
+    border-radius: 5px; /* Subtle rounded corners for the card */
+    overflow: hidden; /* Ensures image corners are also rounded if image has full width */
+    position: relative; /* For play button positioning */
+    display: flex; /* Use flex for internal layout */
+    flex-direction: column; /* Stack content vertically */
+}
+
+.tutorial-card img:first-child { /* Targets the main video thumbnail */
+    width: 100%;
+    height: 150px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensure image covers the area */
+    border-radius: 5px 5px 0 0; /* Rounded top corners */
+}
+
+.tutorial-card .play-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px; /* Same height as image */
+    background-color: rgba(194, 113, 255, 0.6); /* Purple overlay for play button */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Temporarily using a circle as a placeholder for the actual play icon */
+    content: ''; /* Essential for pseudo-elements, even if empty */
+    /* If you have an SVG or Font Awesome play icon, use it here */
+}
+
+.tutorial-card .play-button::before {
+    content: '\f144'; /* Font Awesome play circle icon */
+    font-family: "Font Awesome 5 Free"; /* Ensure Font Awesome is loaded */
+    font-weight: 900; /* For solid icon */
+    font-size: 60px; /* Size of the play button icon */
+    color: #fff; /* White color for the play button */
+}
+
+
+.tutorial-card h3 { /* Tutorial title */
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    margin: 15px 15px 5px 15px; /* Padding inside the card */
+}
+
+.tutorial-card .tutorial-description {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.5;
+    margin: 0 15px 15px 15px; /* Padding inside the card */
+    flex-grow: 1; /* Allows description to take up space, pushing author/rating down */
+}
+
+.tutorial-card .tutorial-author {
+    display: flex;
+    align-items: center;
+    margin: 0 15px 10px 15px; /* Padding inside the card */
+}
+
+.tutorial-card .tutorial-author img {
+    width: 30px; /* Smaller author image */
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.tutorial-card .tutorial-author h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #C271FF; /* Purple color for author name */
+    margin: 0;
+}
+
+.tutorial-card .tutorial-rating {
+    display: flex; /* Make stars appear in a row */
+    gap: 3px; /* Space between stars */
+    margin: 0 15px 10px 15px; /* Padding inside the card */
+    align-items: center;
+}
+
+.tutorial-card .tutorial-rating i {
+    color: #C271FF; /* Filled star color (purple) */
+    font-size: 15px; /* Star size */
+}
+
+.tutorial-card .tutorial-rating .fa-regular { /* For empty stars */
+    color: rgba(255, 255, 255, 0.2); /* Lighter color for empty stars */
+}
+
+.tutorial-card .tutorial-duration {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.5); /* Faded color for duration */
+    text-align: right; /* Align duration to the right */
+    margin: 0 15px 15px 15px; /* Padding inside the card */
+}
+
 /* Placeholder for the rest of the main content and footer */
-main section:not(.hero-section):not(.quote-section) { /* Exclude new section from generic styling if needed */
+main section:not(.hero-section):not(.quote-section):not(.popular-tutorials-section) { /* Exclude new section from generic styling if needed */
     padding: 60px 20px; /* Add some padding to other sections */
     max-width: 1200px;
     margin: 0 auto;
