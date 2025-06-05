@@ -7,10 +7,15 @@ This repository contains basic CSS examples and practice files. It's designed to
 ## Project Structure
 
 The `css_basic` folder is structured as follows:
+
 css_basic/
+
 ├── index.html          # Main HTML file linking to CSS
+
 ├── styles.css          # Primary CSS file for styling index.html
+
 ├── base.css            # Contains common default CSS rules to enhance base styling.
+
 └── README.md           # This documentation file
 
 ### Instructions
