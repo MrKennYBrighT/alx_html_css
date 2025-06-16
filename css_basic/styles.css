@@ -85,3 +85,84 @@ aside {
  * This indicates that the core flexbox layout (columns for body, rows for main,
  * and proportions for article/aside) is the primary goal.
  */
+
+/*
+ * 3. Some more styling (Strictly adhering to instructions)
+ */
+
+/* Instruction: Add CSS rule for the .logo class */
+.logo {
+    font-size: 2em; /* Make the character bigger as suggested */
+    color: #FFD700; /* Gold color, non-positioning style */
+    margin-right: 15px; /* Add some space to the right of the logo */
+    /*
+     * The instruction implicitly suggests this logo should appear at the top-left.
+     * Given it's in a list, we might need to adjust the nav ul's display.
+     * Since the existing header/nav/ul structure from index.html is likely
+     * already being styled by base.css for navigation (e.g., display: flex or
+     * display: inline-block for list items),
+     * we'll primarily style the logo itself.
+     * Adding 'display: flex' to 'nav ul' and 'align-items: center' can properly
+     * align it with other nav items, but this might interfere with base.css.
+     * Sticking strictly to "add the CSS rule for you" and avoiding changing
+     * layout strategy, I'll focus on the logo's appearance.
+     * If the nav list items are displayed as inline-block or flex, the logo will
+     * naturally appear to the left of the links.
+     */
+}
+
+/* General styling for headers, paragraphs, links, etc. - non-positioning */
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Styling specifically for content inside <article> sections as allowed */
+section h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+section article h3 { /* For sub-articles inside sections */
+    color: #34495e;
+    margin-top: 15px;
+}
+
+/* Table styling (non-positioning) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
