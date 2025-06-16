@@ -1,45 +1,17 @@
-/*
- * CSS for Positioning (as per instructions in the task)
- * This code should be placed in your styles.css file.
- */
 
-/* Instruction 1: Both container tags, <body> and <main> must be told that
- * they are containers to flexible boxes: you need to apply the display: flex
- * property to both of them.
- */
 body,
 main {
     display: flex;
 }
 
-/* Instruction 2: However, <body> contains a column of three boxes (<header>, <main> and <footer>),
- * therefore you must apply the flex-direction: column property to <body>,
- * whereas <main> contains a row of 2 boxes (<article> and <aside>), so
- * you must apply the flex-direction: row property to <main>.
- */
 body {
     flex-direction: column;
 }
 
 main {
     flex-direction: row;
-    /* Instruction 3: Ensure the <main> tag keeps an automatic height and width,
-     * by applying the flex: auto property to it.
-     * Note: While flex: auto is correct, a common practice to make main take
-     * available space in a column-flex container is flex-grow: 1;
-     * However, strictly following the instruction, we use flex: auto.
-     */
     flex: auto;
 }
-
-/* Instruction 4: To wrap this layout, you want to be sure that your content
- * (<article>) takes 5/6 of the width of the page, and your <aside> takes 1/6.
- * You can campaign for them the number of boxes they should fill in.
- * This is done by applying the property flex: 5 to <article> (using up 2 boxes),
- * and flex: 1 to <aside> (using up 1 box).
- * NOTE: The prompt says "using up 2 boxes" and "using up 1 box", but the ratio
- * is explicitly 5/6 and 1/6, which corresponds to flex: 5 and flex: 1 respectively.
- */
 article {
     flex: 5;
 }
@@ -48,19 +20,11 @@ aside {
     flex: 1;
 }
 
-/* Instruction 5: Finally, you want to be sure that the user can scroll within
- * your <article> and your <aside>. You can do this by applying the
- * overflow-y: auto CSS property to both of them.
- */
 article,
 aside {
     overflow-y: auto;
 }
 
-/* Optional: Adding some basic visual cues for demonstration/testing
- * These are not strictly asked by the prompt for layout, but can help
- * verify the layout is working as expected. Remove if not needed for submission.
- */
 header, footer {
     background-color: lightgray;
     padding: 20px;
@@ -85,84 +49,3 @@ aside {
  * This indicates that the core flexbox layout (columns for body, rows for main,
  * and proportions for article/aside) is the primary goal.
  */
-
-/*
- * 3. Some more styling (Strictly adhering to instructions)
- */
-
-/* Instruction: Add CSS rule for the .logo class */
-.logo {
-    font-size: 2em; /* Make the character bigger as suggested */
-    color: #FFD700; /* Gold color, non-positioning style */
-    margin-right: 15px; /* Add some space to the right of the logo */
-    /*
-     * The instruction implicitly suggests this logo should appear at the top-left.
-     * Given it's in a list, we might need to adjust the nav ul's display.
-     * Since the existing header/nav/ul structure from index.html is likely
-     * already being styled by base.css for navigation (e.g., display: flex or
-     * display: inline-block for list items),
-     * we'll primarily style the logo itself.
-     * Adding 'display: flex' to 'nav ul' and 'align-items: center' can properly
-     * align it with other nav items, but this might interfere with base.css.
-     * Sticking strictly to "add the CSS rule for you" and avoiding changing
-     * layout strategy, I'll focus on the logo's appearance.
-     * If the nav list items are displayed as inline-block or flex, the logo will
-     * naturally appear to the left of the links.
-     */
-}
-
-/* General styling for headers, paragraphs, links, etc. - non-positioning */
-h1 {
-    color: #333;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-p {
-    line-height: 1.6;
-    margin-bottom: 10px;
-}
-
-a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Styling specifically for content inside <article> sections as allowed */
-section h2 {
-    color: #2c3e50;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 5px;
-    margin-top: 20px;
-    margin-bottom: 15px;
-}
-
-section article h3 { /* For sub-articles inside sections */
-    color: #34495e;
-    margin-top: 15px;
-}
-
-/* Table styling (non-positioning) */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-}
-
-th {
-    background-color: #f2f2f2;
-}
-
-tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
